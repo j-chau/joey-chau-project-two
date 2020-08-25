@@ -1,7 +1,29 @@
 header {
     background-size: cover;
     color: $off-white;
+    height: 83vh;
 }
-.logo {
-    font-size: 2.5rem;
+.header-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    outline: 1px solid magenta;	
+    height: 100%;
+}
+.top-nav {
+    display: flex;
+    outline: 1px solid magenta;	
+    align-items: flex-end;
+    padding: 1.35em 0;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        width: 550px;
+        li:not(:first-child) {
+            line-height: 37px;
+        }
+    }
+    a {
+        padding: 1em 0;
+    }
 }

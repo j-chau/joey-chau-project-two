@@ -2,7 +2,20 @@
     header {
         background-image: url(../assets/home-image-1.jpg);
     }
+    h1 {
+        height: 100%;
+        width: 7ch;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        padding-top: 0.55em;
+        z-index: 2;
+    }
     .header-img {
         width: 45%;
+        position: absolute;
+        right: 0;
+        top: 23%;
     }
 }

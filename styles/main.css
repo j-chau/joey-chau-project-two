@@ -216,7 +216,7 @@ img {
 
 .wrapper {
   max-width: 1280px;
-  width: 90%;
+  width: 82%;
   margin: 0 auto;
 }
 
@@ -224,12 +224,6 @@ img {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-}
-
-.d-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 html {
@@ -241,8 +235,18 @@ body {
   font-size: 2rem;
 }
 
-h1, h2, h3, h4, .logo {
+h1, h2, h3, h4,
+.logo, .top-nav {
   font-family: "Josefin Sans", sans-serif;
+}
+
+h1 {
+  font-size: 16.6rem;
+  line-height: 0.83em;
+}
+
+h1 span {
+  color: #f8e71c;
 }
 
 a {
@@ -250,19 +254,110 @@ a {
   color: inherit;
 }
 
-header {
-  background-size: cover;
-  color: #f0efed;
+@media (max-width: 1600px) {
+  body {
+    font-size: 1.6rem;
+  }
+  h1 {
+    font-size: 14.5rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  h1 {
+    font-size: 12rem;
+  }
+}
+
+.top-nav ul {
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .logo {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+
+header {
+  background-size: cover;
+  color: #f0efed;
+  height: 83vh;
+}
+
+.header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  outline: 1px solid magenta;
+  height: 100%;
+}
+
+.top-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  outline: 1px solid magenta;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 1.35em 0;
+}
+
+.top-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 550px;
+}
+
+.top-nav ul li:not(:first-child) {
+  line-height: 37px;
+}
+
+.top-nav a {
+  padding: 1em 0;
 }
 
 .home header {
   background-image: url(../assets/home-image-1.jpg);
 }
 
+.home h1 {
+  height: 100%;
+  width: 7ch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  padding-top: 0.55em;
+  z-index: 2;
+}
+
 .home .header-img {
   width: 45%;
+  position: absolute;
+  right: 0;
+  top: 23%;
+}
+
+.border {
+  outline: 1px solid magenta;
 }
