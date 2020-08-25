@@ -178,7 +178,7 @@ button, html, input, select, textarea {
   box-sizing: border-box;
 }
 
-.visuallyHidden:not(:focus):not(:active) {
+.sr-only:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -190,4 +190,69 @@ button, html, input, select, textarea {
   -webkit-clip-path: inset(100%);
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+}
+
+h1, h2, h3, h4, .logo {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+}
+
+.skip-link {
+  position: absolute;
+  top: 5px;
+  left: -1000px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: white;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+.skip-link:focus {
+  left: 50%;
+  outline-color: white;
+}
+
+.wrapper {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.wrapper-lg {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.home header {
+  background-image: url(../assets/home-image-1.jpg);
+}
+
+header {
+  background-size: cover;
+  color: #f0efed;
+}
+
+.logo {
+  font-size: 2.5rem;
 }
