@@ -1,0 +1,19 @@
+@import "./abstracts/variables";
+
+@import "./base/reset";
+@import "./base/base";
+@import "./base/typography";
+
+@import "./layout/header";
+
+@import "./pages/page-home";
+@import "./pages/page-blog";
+@import "./pages/page-contact";
+
+
+// font-family: 'Josefin Sans', sans-serif;
+// font-family: 'Roboto', sans-serif;
+
+
+// ------ THINGS TO REMEMBER ------ //
+//  remove .clearfix if no floats used

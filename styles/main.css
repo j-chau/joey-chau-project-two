@@ -178,6 +178,10 @@ button, html, input, select, textarea {
   box-sizing: border-box;
 }
 
+img {
+  width: 100%;
+}
+
 .sr-only:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -190,28 +194,6 @@ button, html, input, select, textarea {
   -webkit-clip-path: inset(100%);
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  font-size: 2rem;
-}
-
-h1, h2, h3, h4, .logo {
-  font-family: "Josefin Sans", sans-serif;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-img {
-  width: 100%;
 }
 
 .skip-link {
@@ -244,8 +226,28 @@ img {
   margin: 0 auto;
 }
 
-.home header {
-  background-image: url(../assets/home-image-1.jpg);
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+}
+
+h1, h2, h3, h4, .logo {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 header {
@@ -255,4 +257,12 @@ header {
 
 .logo {
   font-size: 2.5rem;
+}
+
+.home header {
+  background-image: url(../assets/home-image-1.jpg);
+}
+
+.home .header-img {
+  width: 45%;
 }
