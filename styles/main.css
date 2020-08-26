@@ -216,7 +216,7 @@ img {
 
 .wrapper {
   max-width: 1280px;
-  width: 82%;
+  width: 79%;
   margin: 0 auto;
 }
 
@@ -320,7 +320,7 @@ a {
 
 .more-info li h3::before {
   font-family: "Font Awesome 5 Free";
-  font-size: 0.75em;
+  font-size: 0.9em;
   content: "\f06c";
   display: -webkit-box;
   display: -ms-flexbox;
@@ -332,10 +332,10 @@ a {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  left: -2.9em;
+  left: -2.6em;
   top: -0.15em;
-  width: 2em;
-  height: 2em;
+  width: 1.9em;
+  height: 1.9em;
   background-color: #f8e71c;
   border-radius: 50%;
 }
@@ -520,7 +520,25 @@ section {
 
 .more-info {
   background-color: #f0efed;
-  padding: 5em;
+}
+
+.more-info ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 6.5em 0 3.6em;
+}
+
+.more-info li {
+  padding-left: 3.8em;
+  width: 50%;
+  margin: 1em 0;
+}
+
+.more-info li p {
+  margin: 0.75em 0;
 }
 
 .border {

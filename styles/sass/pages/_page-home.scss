@@ -57,5 +57,17 @@ section {
 }
 .more-info {
     background-color: $off-white;
-    padding: 5em;
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 6.5em 0 3.6em;
+    }
+    li {
+        padding-left: 3.8em; 
+        width: 50%;
+        margin: 1em 0;
+        p {
+            margin: 0.75em 0;
+        }
+    }
 }
