@@ -216,7 +216,7 @@ img {
 
 .wrapper {
   max-width: 1280px;
-  width: 79%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -285,6 +285,9 @@ a {
   .about h2 {
     font-size: 4rem;
   }
+  .founder-content h2 {
+    font-size: 3.6rem;
+  }
 }
 
 .top-nav ul {
@@ -297,7 +300,8 @@ a {
   text-transform: capitalize;
 }
 
-.read-more {
+.read-more,
+.find-more {
   background-color: #0e902d;
   color: white;
   font-weight: 700;
@@ -312,6 +316,11 @@ a {
   text-align: center;
   width: 13ch;
   margin-bottom: 0;
+}
+
+.founder-content .find-more {
+  display: inline-block;
+  text-align: center;
 }
 
 .more-info li h3 {
@@ -539,6 +548,31 @@ section {
 
 .more-info li p {
   margin: 0.75em 0;
+}
+
+.founder {
+  background-color: #f0efed;
+  padding: 6em 0;
+}
+
+.founder .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.founder img {
+  -webkit-box-shadow: 25px 25px 0 -10px #f8e71c;
+          box-shadow: 25px 25px 0 -10px #f8e71c;
+  min-width: 245px;
+  height: 245px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 245px;
+          flex: 0 0 245px;
+}
+
+.founder .founder-content {
+  margin-left: 6.4em;
 }
 
 .border {

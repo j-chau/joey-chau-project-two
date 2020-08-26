@@ -71,3 +71,19 @@ section {
         }
     }
 }
+.founder {
+    background-color: $off-white;
+    padding: 6em 0;
+    .wrapper {
+        display: flex;
+    }
+    img {
+        @include imgShadow(false);
+        min-width:245px;
+        height: 245px;
+        flex: 0 0 245px;
+    }
+    .founder-content {
+        margin-left: 6.4em;
+    }
+}

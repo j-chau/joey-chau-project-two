@@ -1,6 +1,5 @@
-@mixin imgShadow($left-img: false) {
-    flex: 0 0 41%;
-    @if not $left-img {
+@mixin imgShadow($right-img: false) {
+    @if not $right-img {
         box-shadow: $shadow-size $shadow-size 0 -10px $sunny-yellow;
     } @else {
         box-shadow: -$shadow-size $shadow-size 0 -10px $sunny-yellow;
@@ -19,6 +18,7 @@
             bottom: $shadow-adjust;
     }
     img {
+        flex: 0 0 41%;
         @include imgShadow($left-img);
     }
 }
