@@ -250,7 +250,7 @@ h1 span {
   color: #f8e71c;
 }
 
-h2 {
+h2, h3 {
   font-size: 3.2rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -279,7 +279,7 @@ a {
   h1 {
     font-size: 12rem;
   }
-  h2 {
+  h2, h3 {
     font-size: 2.4rem;
   }
   .about h2 {
@@ -308,10 +308,49 @@ a {
 }
 
 .discover-content .read-more {
-  display: block;
+  display: inline-block;
   text-align: center;
   width: 13ch;
   margin-bottom: 0;
+}
+
+.more-info li h3 {
+  position: relative;
+}
+
+.more-info li h3::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 0.75em;
+  content: "\f06c";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: -2.9em;
+  top: -0.15em;
+  width: 2em;
+  height: 2em;
+  background-color: #f8e71c;
+  border-radius: 50%;
+}
+
+.more-info li:nth-child(2) h3::before {
+  content: "\f0c0";
+}
+
+.more-info li:nth-child(3) h3::before {
+  content: "\f15b";
+  font-weight: 900;
+}
+
+.more-info li:nth-child(4) h3::before {
+  content: "\f095";
 }
 
 header {
@@ -435,6 +474,17 @@ section {
           box-shadow: 25px 25px 0 -10px #f8e71c;
 }
 
+.discover-content {
+  width: 40%;
+  margin-left: 14em;
+  margin-right: calc((100% - 82%) / 2);
+  margin-bottom: -0.5em;
+}
+
+.discover-content p {
+  margin: 0.7em 0;
+}
+
 .discover-flip {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -442,10 +492,15 @@ section {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  position: relative;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  bottom: -40px;
 }
 
 .discover-flip img {
@@ -456,14 +511,16 @@ section {
           box-shadow: -25px 25px 0 -10px #f8e71c;
 }
 
-.discover-content {
-  width: 40%;
-  margin-left: 14em;
-  margin-bottom: -0.5em;
+.discover-flip .discover-content {
+  text-align: right;
+  margin-right: 14em;
+  margin-left: calc((100% - 82%) / 2);
+  margin-top: 30px;
 }
 
-.discover-content p {
-  margin: 0.7em 0;
+.more-info {
+  background-color: #f0efed;
+  padding: 5em;
 }
 
 .border {

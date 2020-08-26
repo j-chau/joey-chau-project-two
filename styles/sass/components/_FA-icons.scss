@@ -1,0 +1,28 @@
+.more-info li {
+    h3 { position: relative; }
+    h3::before {
+        font-family: "Font Awesome 5 Free";
+        font-size: 0.75em;
+        content: "\f06c";           //fas fa-leaf
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: -2.9em;
+        top: -0.15em;
+        width: 2em;
+        height: 2em;
+        background-color: $sunny-yellow;
+        border-radius: 50%;
+    }
+    &:nth-child(2) h3::before {
+        content: "\f0c0";           //fas fa-users
+    }
+    &:nth-child(3) h3::before {
+        content: "\f15b";           //fas fa-file
+        font-weight: 900;
+    }
+    &:nth-child(4) h3::before {
+        content: "\f095";           //fas fa-phone
+    }
+}

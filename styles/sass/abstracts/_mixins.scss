@@ -1,19 +1,22 @@
-@mixin imgShadow($left-img: true) {
+@mixin imgShadow($left-img: false) {
     flex: 0 0 41%;
-    @if $left-img {
+    @if not $left-img {
         box-shadow: $shadow-size $shadow-size 0 -10px $sunny-yellow;
     } @else {
         box-shadow: -$shadow-size $shadow-size 0 -10px $sunny-yellow;
     }
 }
-@mixin discoverFlip($left-img: true) {
+
+@mixin discoverFlip($left-img: false) {
     display: flex;
     align-items: flex-end;
-    @if $left-img {
-            position: relative;
-            top: ($shadow-size + 15px) * -1;
+    position: relative;
+    @if not $left-img {
+            top: $shadow-adjust;
         } @else {
             flex-direction: row-reverse;
+            align-items: flex-start;
+            bottom: $shadow-adjust;
     }
     img {
         @include imgShadow($left-img);
