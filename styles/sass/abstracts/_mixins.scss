@@ -1,0 +1,21 @@
+@mixin imgShadow($left-img: true) {
+    flex: 0 0 41%;
+    @if $left-img {
+        box-shadow: $shadow-size $shadow-size 0 -10px $sunny-yellow;
+    } @else {
+        box-shadow: -$shadow-size $shadow-size 0 -10px $sunny-yellow;
+    }
+}
+@mixin discoverFlip($left-img: true) {
+    display: flex;
+    align-items: flex-end;
+    @if $left-img {
+            position: relative;
+            top: ($shadow-size + 15px) * -1;
+        } @else {
+            flex-direction: row-reverse;
+    }
+    img {
+        @include imgShadow($left-img);
+    }
+}

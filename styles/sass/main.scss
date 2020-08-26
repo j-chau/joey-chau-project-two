@@ -1,8 +1,11 @@
 @import "./abstracts/variables";
+@import "./abstracts/mixins";
 
 @import "./base/reset";
 @import "./base/base";
 @import "./base/typography";
+
+@import "./components/buttons";
 
 @import "./layout/header";
 
@@ -21,3 +24,4 @@
 
 // ------ THINGS TO REMEMBER ------ //
 //  remove .clearfix if no floats used
+

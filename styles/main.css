@@ -233,10 +233,11 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 2rem;
+  line-height: 1.6;
 }
 
 h1, h2, h3, h4,
-.logo, .top-nav {
+.logo, .top-nav, .read-more {
   font-family: "Josefin Sans", sans-serif;
 }
 
@@ -247,6 +248,17 @@ h1 {
 
 h1 span {
   color: #f8e71c;
+}
+
+h2 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.about h2 {
+  font-size: 5.63rem;
+  letter-spacing: 1.3px;
 }
 
 a {
@@ -267,6 +279,12 @@ a {
   h1 {
     font-size: 12rem;
   }
+  h2 {
+    font-size: 2.4rem;
+  }
+  .about h2 {
+    font-size: 4rem;
+  }
 }
 
 .top-nav ul {
@@ -277,6 +295,23 @@ a {
 .logo {
   font-size: 3rem;
   text-transform: capitalize;
+}
+
+.read-more {
+  background-color: #0e902d;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+  width: 18ch;
+  padding: 0.5em 0;
+  margin: 1.8em 0;
+}
+
+.discover-content .read-more {
+  display: block;
+  text-align: center;
+  width: 13ch;
+  margin-bottom: 0;
 }
 
 header {
@@ -296,7 +331,6 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  outline: 1px solid magenta;
   height: 100%;
 }
 
@@ -304,7 +338,6 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  outline: 1px solid magenta;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -322,7 +355,7 @@ header {
 }
 
 .top-nav ul li:not(:first-child) {
-  line-height: 37px;
+  line-height: 54px;
 }
 
 .top-nav a {
@@ -352,10 +385,85 @@ header {
 }
 
 .home .header-img {
-  width: 45%;
+  width: 44%;
   position: absolute;
   right: 0;
   top: 23%;
+}
+
+.about-container {
+  background-color: #f0efed;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  width: 825px;
+  padding: 12em 0;
+}
+
+section {
+  background-color: white;
+}
+
+.discover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+  top: -40px;
+}
+
+.discover img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 41%;
+          flex: 0 0 41%;
+  -webkit-box-shadow: 25px 25px 0 -10px #f8e71c;
+          box-shadow: 25px 25px 0 -10px #f8e71c;
+}
+
+.discover-flip {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.discover-flip img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 41%;
+          flex: 0 0 41%;
+  -webkit-box-shadow: -25px 25px 0 -10px #f8e71c;
+          box-shadow: -25px 25px 0 -10px #f8e71c;
+}
+
+.discover-content {
+  width: 40%;
+  margin-left: 14em;
+  margin-bottom: -0.5em;
+}
+
+.discover-content p {
+  margin: 0.7em 0;
 }
 
 .border {

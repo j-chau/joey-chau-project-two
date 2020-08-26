@@ -1,0 +1,15 @@
+.read-more {
+    background-color: $green;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+    width: 18ch;
+    padding: 0.5em 0;
+    margin: 1.8em 0;
+}
+.discover-content .read-more {
+    display: block;
+    text-align: center;
+    width: 13ch;
+    margin-bottom: 0;
+}

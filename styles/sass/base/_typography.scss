@@ -4,9 +4,10 @@ html {
 body {
     font-family: $font-body;
     font-size: 2rem;
+    line-height: 1.6;
 }
 h1, h2, h3, h4, 
-.logo, .top-nav {
+.logo, .top-nav, .read-more {
     font-family: $font-header;
 }
 h1 {
@@ -16,22 +17,27 @@ h1 {
 h1 span {
     color: $sunny-yellow;
 }
+h2 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.about h2 {
+    font-size: 5.63rem;
+    letter-spacing: 1.3px;
+}
 a {
     text-decoration: none;
     color: inherit;
 }
 @media (max-width: 1600px) {
-    body {
-        font-size: 1.6rem;
-    }
-    h1 {
-        font-size: 14.5rem;
-    }
+    body { font-size: 1.6rem; }
+    h1 { font-size: 14.5rem; }
 }
 @media (max-width: 1280px) {
-    h1 {
-    font-size: 12rem;
-    }
+    h1 { font-size: 12rem; }
+    h2 { font-size: 2.4rem; }
+    .about h2 { font-size: 4rem; }
 }
 .top-nav ul {
     text-transform: uppercase;
