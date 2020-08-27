@@ -1,5 +1,6 @@
 .read-more,
-.find-more {
+.find-more,
+.post-btn {
     background-color: $green;
     color: white;
     font-weight: 700;
@@ -17,4 +18,9 @@
 .founder-content .find-more {
     display: inline-block;
     text-align: center;
+}
+.post-btn {
+    width: 100%;
+    padding: 0.8em;
+    margin: 0;
 }

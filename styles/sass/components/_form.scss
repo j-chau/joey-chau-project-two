@@ -1,0 +1,24 @@
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.4em;
+    & > * {
+        font-weight: 300;
+        background-color: $off-white;
+        border: 0;
+        padding: 1.4em 1em;
+    }
+}
+input {
+    border-bottom: $form-border;
+}
+textarea {
+    grid-column: span 2;
+    border: $form-border;
+    height: 150px;
+    resize: none;
+    padding: 2.1em 2em;
+}
+button {
+    grid-column: span 2;
+}

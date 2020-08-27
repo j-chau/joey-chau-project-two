@@ -22,3 +22,15 @@
         @include imgShadow($left-img);
     }
 }
+@mixin postDate($post: true) {
+    color: $forest-green;
+    font-family: $font-header;
+    @if $post {
+        font-style: italic;
+        .publish-author {
+            font-weight: 700;
+        }
+    } @else {
+        font-weight: 700;
+    }
+}

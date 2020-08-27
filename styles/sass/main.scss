@@ -8,6 +8,8 @@
 @import "./components/buttons";
 @import "./components/FA-icons";
 @import "./components/gallery";
+@import "./components/comments";
+@import "./components/form";
 
 @import "./layout/header";
 @import "./layout/footer";
@@ -27,4 +29,4 @@
 
 // ------ THINGS TO REMEMBER ------ //
 //  remove .clearfix if no floats used
-
+//  rearrange _typography for more comprehensive h2 sizing

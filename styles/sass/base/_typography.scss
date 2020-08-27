@@ -4,9 +4,11 @@ html {
 body {
     font-family: $font-body;
     font-size: 2rem;
+    font-weight: 400;
     line-height: 1.6;
 }
 h1, h2, h3, h4, 
+input, textarea, button,
 .logo, .top-nav, .read-more {
     font-family: $font-header;
 }
@@ -26,6 +28,11 @@ h2, h3 {
     font-size: 5.63rem;
     letter-spacing: 1.3px;
 }
+.blog h2 {
+    font-size: 4.3rem;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+}
 a {
     text-decoration: none;
     color: inherit;
@@ -39,12 +46,19 @@ a {
     h2, h3 { font-size: 2.4rem; }
     .about h2 { font-size: 4rem; }
     .founder-content h2 { font-size: 3.6rem; }
-}
-.top-nav ul {
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    .blog h2 { font-size: 3.6rem; }
 }
 .logo {
-    font-size: 3rem;
+    font-size: 4rem;
     text-transform: capitalize;
+}
+.blog, .contact {
+    h1 {
+        font-size: 5.2rem;
+        font-weight: 700;
+        padding-bottom: 2em;
+    }
+}
+.publish-info {
+    @include postDate(true);
 }
