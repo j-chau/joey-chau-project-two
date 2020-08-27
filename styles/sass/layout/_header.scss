@@ -3,6 +3,21 @@ header {
     color: $off-white;
     height: 83vh;
 }
+.blog, .contact {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 60vh;
+        .top-nav {
+            width: 100%;
+            background-color: black;
+        }  
+    }
+    h1 {
+        padding-bottom: 1.7em;
+    }
+}
 .header-container {
     display: flex;
     flex-direction: column;

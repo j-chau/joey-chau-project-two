@@ -1,0 +1,12 @@
+.contact {
+    background-color: $off-white;
+    header {
+        background-image: url(../assets/contact-header-1.jpg);
+    }
+    span {
+        outline: 1px solid magenta;	
+        display: inline-block;
+        width: 6ch;
+        line-height: 1.2em;
+    }
+}
