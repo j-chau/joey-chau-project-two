@@ -3,38 +3,23 @@
     header {
         background-image: url(../assets/blog-header-1.jpg);
     }
-    main {
-        display: flex;        
-        flex-direction: row-reverse;
-        justify-content: space-between;
+    h1 {
+        padding-bottom: 1.7em;
     }
-    article {
-        width: 65%;
-        position: relative;
-        top: -200px;
-        padding-left: 20px;
-        margin-bottom: -120px;
+    .sidebar .wrapper-lg {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     }
-    .sidebar {
-        width: 30%;
-        flex-shrink: 0;
-        margin-top: 80px;
-        .wrapper-lg {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-        }
-        img {
-            box-shadow: 30px 15px 0 -15px white,
-                        30px 0 0 -15px white;
-        }
+    img {
+        box-shadow: 30px 15px 0 -15px white,
+                    30px 0 0 -15px white;
     }
     .blog-banner {
         @include imgShadow(true);
     }
 }
 .post-container {
-    // width: 81%;
     margin-left: -10px;
     padding: 4em 0 0.65em $blog-padding;
     box-shadow: -5px 5px 0 $sunny-yellow;

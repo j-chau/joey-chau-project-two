@@ -1,3 +1,4 @@
+// yellow box-shadow
 @mixin imgShadow($right-img: false) {
     @if not $right-img {
         box-shadow: $shadow-size $shadow-size 0 -10px $sunny-yellow;
@@ -6,6 +7,7 @@
     }
 }
 
+// when arranging text to the right or left of an image, change the direction of the box-shadow
 @mixin discoverFlip($left-img: false) {
     display: flex;
     align-items: flex-end;
@@ -22,6 +24,8 @@
         @include imgShadow($left-img);
     }
 }
+
+// if post date is attached to blog post, add bold and italics
 @mixin postDate($post: true) {
     color: $forest-green;
     font-family: $font-header;

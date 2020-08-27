@@ -1,0 +1,17 @@
+.col-2-layout {
+    display: flex;        
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+.w-70 {
+    width: 65%;
+    position: relative;
+    top: -200px;
+    padding-left: 20px;
+    margin-bottom: -120px;
+}
+.w-30 {
+    width: 30%;
+    flex-shrink: 0;
+    margin-top: 80px;
+}

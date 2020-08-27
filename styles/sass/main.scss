@@ -13,6 +13,7 @@
 
 @import "./layout/header";
 @import "./layout/footer";
+@import "./layout/2-col";
 
 @import "./pages/page-home";
 @import "./pages/page-blog";
@@ -28,6 +29,7 @@
 }
 
 // ------ THINGS TO REMEMBER ------ //
-//  remove .clearfix if no floats used
 //  remove comment in _base .wrapper about width
 //  rearrange _typography for more comprehensive h2 sizing
+//  check for commented out code before submitting
+//  add favicon

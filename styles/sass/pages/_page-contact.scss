@@ -2,11 +2,16 @@
     background-color: $off-white;
     header {
         background-image: url(../assets/contact-header-1.jpg);
+        h1 {
+            padding-bottom: 0.3em;
+        }
+        span {
+            display: inline-block;
+            width: 6ch;
+            line-height: 1.2em;
+        }
     }
-    span {
-        outline: 1px solid magenta;	
-        display: inline-block;
-        width: 6ch;
-        line-height: 1.2em;
+    main {
+        background-color: white;
     }
 }

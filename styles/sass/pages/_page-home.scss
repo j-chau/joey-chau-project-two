@@ -1,6 +1,10 @@
 .home {
     header {
         background-image: url(../assets/home-image-1.jpg);
+        height: 83vh;
+        .top-nav {
+            background: none;
+        }
     }
     h1 {
         height: 100%;
