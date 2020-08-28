@@ -38,27 +38,59 @@
 section {
     background-color: white;
 }
-.discover {
-    @include discoverFlip(false);
-}
-.discover-content {
-    width: 40%;
-    margin-left: 14em;
-    margin-right: calc((100% - 82%) / 2);
-    margin-bottom: -0.5em;
-    p {
+.grid {
+    position: relative;
+    top: $shadow-adjust;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8% 15%;
+    img {
+        @include imgShadow(false);
+    }
+    img.flip {
+        order: 4;
+        @include imgShadow(true);
+    }
+    .discover-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-right: 30%;
+    }    
+    div.flip {
+        order: 3;
+        text-align: right;
+        justify-content: flex-start;
+        align-items: flex-end;
+        margin-top: 30px;
+        margin-left: 30%;
+        margin-right: 0;
+    }
+    div p {
         margin: 0.7em 0;
     }
 }
-.discover-flip {
-    @include discoverFlip(true);
-    .discover-content {
-        text-align: right;
-        margin-right: 14em;
-        margin-left: calc((100% - 82%) / 2);
-        margin-top: 30px;
-    }
-}
+// .discover {
+//     @include discoverFlip(false);
+// }
+// .discover-content {
+//     width: 40%;
+//     margin-left: 14em;
+//     margin-right: calc((100% - 82%) / 2);
+//     margin-bottom: -0.5em;
+//     p {
+//         margin: 0.7em 0;
+//     }
+// }
+// .discover-flip {
+//     @include discoverFlip(true);
+//     .discover-content {
+//         text-align: right;
+//         margin-right: 14em;
+//         margin-left: calc((100% - 82%) / 2);
+//         margin-top: 30px;
+//     }
+// }
 .more-info {
     background-color: $off-white;
     ul {

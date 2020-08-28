@@ -7,24 +7,6 @@
     }
 }
 
-// when arranging text to the right or left of an image, change the direction of the box-shadow
-@mixin discoverFlip($left-img: false) {
-    display: flex;
-    align-items: flex-end;
-    position: relative;
-    @if not $left-img {
-            top: $shadow-adjust;
-        } @else {
-            flex-direction: row-reverse;
-            align-items: flex-start;
-            bottom: $shadow-adjust;
-    }
-    img {
-        flex: 0 0 41%;
-        @include imgShadow($left-img);
-    }
-}
-
 // if post date is attached to blog post, add bold and italics
 @mixin postDate($post: true) {
     color: $forest-green;

@@ -650,67 +650,61 @@ section {
   background-color: white;
 }
 
-.discover {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+.grid {
   position: relative;
   top: -40px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 8% 15%;
 }
 
-.discover img {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 41%;
-          flex: 0 0 41%;
+.grid img {
   -webkit-box-shadow: 25px 25px 0 -10px #f8e71c;
           box-shadow: 25px 25px 0 -10px #f8e71c;
 }
 
-.discover-content {
-  width: 40%;
-  margin-left: 14em;
-  margin-right: calc((100% - 82%) / 2);
-  margin-bottom: -0.5em;
-}
-
-.discover-content p {
-  margin: 0.7em 0;
-}
-
-.discover-flip {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  position: relative;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  bottom: -40px;
-}
-
-.discover-flip img {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 41%;
-          flex: 0 0 41%;
+.grid img.flip {
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
   -webkit-box-shadow: -25px 25px 0 -10px #f8e71c;
           box-shadow: -25px 25px 0 -10px #f8e71c;
 }
 
-.discover-flip .discover-content {
+.grid .discover-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-right: 30%;
+}
+
+.grid div.flip {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
   text-align: right;
-  margin-right: 14em;
-  margin-left: calc((100% - 82%) / 2);
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   margin-top: 30px;
+  margin-left: 30%;
+  margin-right: 0;
+}
+
+.grid div p {
+  margin: 0.7em 0;
 }
 
 .more-info {
