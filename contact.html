@@ -32,13 +32,16 @@
 
     <main id="mainContent" class="wrapper col-2-layout">
         <form class="w-70">
-            <label for="comment-author" class="sr-only">Name</label>
-            <input type="text" placeholder="Name" name="comment-author">
-            <label for="comment-contact" class="sr-only">Email Address</label>
-            <input type="email" placeholder="Email address" name="comment-contact">
-            <label for="comment-content" class="sr-only">Comment</label>
-            <textarea placeholder="Comment" name="comment-content"></textarea>
-            <button type="submit">Post Comment</button>
+            <label for="commentAuthor" class="sr-only">Name</label>
+            <input type="text" placeholder="Name" id="commentAuthor" name="commentAuthor">
+
+            <label for="commentContact" class="sr-only">Email Address</label>
+            <input type="email" placeholder="Email address" id="commentContact" name="commentContact">
+
+            <label for="commentContent" class="sr-only">Message</label>
+            <textarea placeholder="Message" id="commentContent" name="commentContent"></textarea>
+
+            <button class="post-btn" type="submit">Submit</button>
         </form>
         <div class="contact-container w-30">
             <nav class="social-list">

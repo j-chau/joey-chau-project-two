@@ -326,6 +326,14 @@ main a {
   font-weight: 700;
 }
 
+address p:first-child {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 0.5em 0;
+}
+
 .read-more,
 .find-more,
 .post-btn {
@@ -439,7 +447,7 @@ form {
 
 form > * {
   font-weight: 300;
-  background-color: #f0efed;
+  background-color: inherit;
   border: 0;
   padding: 1.4em 1em;
 }
@@ -458,6 +466,20 @@ textarea {
 
 button {
   grid-column: span 2;
+}
+
+.social-list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 115px;
+}
+
+.social-list ul a {
+  color: #0e902d;
 }
 
 header {
@@ -838,8 +860,11 @@ section {
   line-height: 1.2em;
 }
 
-.contact main {
+.contact form {
   background-color: white;
+  padding: 2em 3em;
+  -webkit-box-shadow: -25px 25px 0 -10px #f8e71c;
+          box-shadow: -25px 25px 0 -10px #f8e71c;
 }
 
 .border {
