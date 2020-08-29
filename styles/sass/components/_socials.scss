@@ -1,8 +1,11 @@
-.social-list ul {
-    display: flex;
-    justify-content: space-between;
-    width: 115px;
-    a {
-        color: $green;
+.social-list {
+    display: inline-block;
+    ul {
+        display: flex;
+        justify-content: space-between;
+        width: 115px;
+        a {
+            color: $green;
+        }
     }
 }

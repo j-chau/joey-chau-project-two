@@ -19,6 +19,18 @@
     .col-2-layout {
         flex-direction: column;
         align-items: flex-end;
-        justify-content: flex-end;
+        justify-content: flex-start;
+        width: 93%;
+        margin: 0 0 0 auto;
+    }
+    .col-2-layout.wrapper-lg {
+        width: 97%;
+    }
+    .w-70 {
+        width: 100%;
+        top: -100px;
+    }
+    .w-30 {
+        width: 100%;
     }
 }

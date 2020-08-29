@@ -6,9 +6,7 @@
         width: 100px;
         height: 100px;
         margin-top: 5px;
-    }
-    .comment-content {
-        margin-left: 2.15em;
+        margin-right: 2.15em;
     }
 }
 .comment-info {
@@ -18,5 +16,16 @@
     .comment img {
         width: 63px;
         height: 63px;
+    }
+}
+@media (max-width: 700px) {
+    .comment {
+        display: block;
+        img {
+            float: left;
+        }
+        .comment-info time {
+            display: block;
+        }
     }
 }
