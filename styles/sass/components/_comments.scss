@@ -3,8 +3,8 @@
     justify-content: space-between;
     padding: 2em 0;
     img {
-        width: 63px;
-        height: 63px;
+        width: 100px;
+        height: 100px;
         margin-top: 5px;
     }
     .comment-content {
@@ -13,4 +13,10 @@
 }
 .comment-info {
     @include postDate(false);
+}
+@media (max-width: 1280px) {
+    .comment img {
+        width: 63px;
+        height: 63px;
+    }
 }

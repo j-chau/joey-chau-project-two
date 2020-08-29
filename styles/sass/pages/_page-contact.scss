@@ -15,5 +15,12 @@
         background-color: white;
         padding: 2em 3em;
         @include imgShadow(true);
+        input, textarea {
+        font-family: $font-body;
+        font-weight: 300;
+        }
+    }
+    main {
+        padding-bottom: 135px;
     }
 }

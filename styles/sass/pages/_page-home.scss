@@ -55,7 +55,7 @@ section {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        margin-right: 30%;
+        margin-right: 125px;
     }    
     div.flip {
         order: 3;
@@ -63,34 +63,13 @@ section {
         justify-content: flex-start;
         align-items: flex-end;
         margin-top: 30px;
-        margin-left: 30%;
+        margin-left: 125px;
         margin-right: 0;
     }
     div p {
         margin: 0.7em 0;
     }
 }
-// .discover {
-//     @include discoverFlip(false);
-// }
-// .discover-content {
-//     width: 40%;
-//     margin-left: 14em;
-//     margin-right: calc((100% - 82%) / 2);
-//     margin-bottom: -0.5em;
-//     p {
-//         margin: 0.7em 0;
-//     }
-// }
-// .discover-flip {
-//     @include discoverFlip(true);
-//     .discover-content {
-//         text-align: right;
-//         margin-right: 14em;
-//         margin-left: calc((100% - 82%) / 2);
-//         margin-top: 30px;
-//     }
-// }
 .more-info {
     background-color: $off-white;
     ul {

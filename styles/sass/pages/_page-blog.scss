@@ -4,16 +4,16 @@
         background-image: url(../assets/blog-header-1.jpg);
     }
     h1 {
-        padding-bottom: 1.7em;
+        padding-bottom: 0.75em;
     }
     .sidebar .wrapper-lg {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-    }
-    img {
-        box-shadow: 30px 15px 0 -15px white,
-                    30px 0 0 -15px white;
+        img {
+            box-shadow: 30px 15px 0 -15px white,
+            30px 0 0 -15px white;
+        }
     }
     .blog-banner {
         @include imgShadow(true);
