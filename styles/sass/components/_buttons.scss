@@ -24,3 +24,9 @@
     padding: 0.8em;
     margin: 0;
 }
+@media (max-width: 700px) {
+    .read-more,
+    .find-more {
+        align-self: center;
+    }
+}
