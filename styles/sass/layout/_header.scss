@@ -17,8 +17,6 @@ header {
     height: 100%;
 }
 .top-nav {
-    display: flex;
-    align-items: flex-end;
     padding-top: 8px;
     ul {
         display: flex;
@@ -34,5 +32,26 @@ header {
     }
     a {
         padding: 1em 0;
+    }
+    .burger-menu {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .home .top-nav,
+    .top-nav .wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: center;
+        ul {
+            width: auto;
+            li:not(:first-child) {
+                display: none;
+            }
+        }
+        .burger-menu {
+            display: inline-block;
+        }
     }
 }

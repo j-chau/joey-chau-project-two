@@ -30,3 +30,8 @@
     width: 100%;
     margin: 0 auto;
 }
+@media (max-width: 992px) {
+    .wrapper {
+        width: 90%;
+    }
+}

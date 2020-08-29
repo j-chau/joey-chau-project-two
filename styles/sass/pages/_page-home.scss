@@ -27,13 +27,15 @@
     background-color: $off-white;
 }
 .about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
     margin: 0 auto;
-    width: 825px;
+    width: 65%;
     padding: 12em 0;
+}
+@media (max-width: 768px) {
+    .about {
+        padding: 8em 0;
+    }
 }
 section {
     background-color: white;
@@ -70,6 +72,22 @@ section {
         margin: 0.7em 0;
     }
 }
+@media (max-width: 992px) {
+    .grid {
+        gap: 11%;
+        .discover-content {
+            margin-right: 15%;
+        }
+        div.flip {
+            margin-left: 15%;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .discover {
+        padding: 5em 0 3.6em;
+    }
+}
 .more-info {
     background-color: $off-white;
     ul {
@@ -92,11 +110,11 @@ section {
     .wrapper {
         display: flex;
     }
+    .founder-img {
+        width: 100%;
+    }
     img {
         @include imgShadow(false);
-        min-width:245px;
-        height: 245px;
-        flex: 0 0 245px;
     }
     .founder-content {
         margin-left: 6.4em;

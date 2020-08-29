@@ -22,3 +22,11 @@ textarea {
 button {
     grid-column: span 2;
 }
+@media (max-width: 768px) {
+    form {
+        gap: 1.8em;
+        & > * {
+            padding: 0.8em 0.6em;
+        }
+    }
+}
