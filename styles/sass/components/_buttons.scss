@@ -77,20 +77,20 @@
         height: 2px;
         left: 3%;
         bottom: 50%;
-        background-color: white;
+        background-color: $sunny-yellow;
         transition: width 200ms linear;
     }
     &::after {
-        left: 57%;
+        left: 67%;
     }
     &:hover::before,
     &:focus::before {
-        width: 40%;
+        width: 30%;
     }
     &:hover::after,
     &:focus::after {
         transition-delay: 400ms;
-        width: 40%;
+        width: 30%;
     }
     &:not(:hover)::before,
     &:not(:focus)::before {

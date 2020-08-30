@@ -102,7 +102,7 @@ section {
         margin: 0.7em 0;
     }
 }
-@media (max-width: 992px) {
+@media (max-width: 1028px) {
     .grid {
         gap: 11%;
         .discover-content {
@@ -186,6 +186,12 @@ section {
     }
     .founder-content {
         margin-left: 6.4em;
+    }
+    @media (max-width: 768px) {
+        .founder-img {
+            flex-shrink: 0;
+            width: 25%;
+        }
     }
 }
 @media (max-width: 700px) {

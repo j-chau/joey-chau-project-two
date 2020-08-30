@@ -491,23 +491,23 @@ address p:first-child {
   height: 2px;
   left: 3%;
   bottom: 50%;
-  background-color: white;
+  background-color: #f8e71c;
   -webkit-transition: width 200ms linear;
   transition: width 200ms linear;
 }
 
 .post-btn::after {
-  left: 57%;
+  left: 67%;
 }
 
 .post-btn:hover::before, .post-btn:focus::before {
-  width: 40%;
+  width: 30%;
 }
 
 .post-btn:hover::after, .post-btn:focus::after {
   -webkit-transition-delay: 400ms;
           transition-delay: 400ms;
-  width: 40%;
+  width: 30%;
 }
 
 .post-btn:not(:hover)::before, .post-btn:not(:focus)::before {
@@ -676,9 +676,6 @@ button {
   form > * {
     padding: 0.8em 0.6em;
   }
-}
-
-@media (max-width: 700px) {
   form input {
     grid-column: span 2;
   }
@@ -695,7 +692,7 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 115px;
+  width: 125px;
 }
 
 .social-list a {
@@ -1092,7 +1089,7 @@ section {
   margin: 0.7em 0;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1028px) {
   .grid {
     gap: 11%;
   }
@@ -1196,6 +1193,14 @@ section {
 
 .founder .founder-content {
   margin-left: 6.4em;
+}
+
+@media (max-width: 768px) {
+  .founder .founder-img {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    width: 25%;
+  }
 }
 
 @media (max-width: 700px) {
