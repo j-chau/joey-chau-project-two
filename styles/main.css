@@ -573,6 +573,19 @@ address p:first-child {
   gap: 25px;
 }
 
+.gallery li {
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 200ms linear;
+  transition: -webkit-transform 200ms linear;
+  transition: transform 200ms linear;
+  transition: transform 200ms linear, -webkit-transform 200ms linear;
+}
+
+.gallery li:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
 @media (max-width: 700px) {
   .gallery {
     -ms-grid-columns: (1fr)[2];
@@ -1372,8 +1385,4 @@ section {
     text-align: right;
     margin-right: 2em;
   }
-}
-
-.border {
-  outline: 1px solid magenta;
 }
