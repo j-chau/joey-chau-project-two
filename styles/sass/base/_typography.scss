@@ -13,7 +13,6 @@ input, textarea, button,
     font-family: $font-header;
 }
 h1 {
-    // font-size: 6.2rem;
     font-size: 4em;
     font-weight: 700;
 }
@@ -69,6 +68,25 @@ main a {
     color: $forest-green;
     font-weight: 700;
     font-style: italic;
+    position: relative;
+    z-index: 1;
+}
+aside a {
+    &::before {
+        @include pseudo-els;
+        width: 0%;
+        height: 40%;
+        left: 0;
+        bottom: 0%;
+        transform: skewX(-35deg);
+        background-color: $sunny-yellow;
+        z-index: -1;
+        transition: width 200ms ease-in;
+    }
+    &:hover::before,
+    &:focus::before {
+        width: 110%;
+    }
 }
 .logo {
     font-size: 2.2em;

@@ -18,20 +18,42 @@ header {
 }
 .top-nav {
     padding-top: 8px;
+    z-index: 2;
     ul {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
         width: 600px;
         text-transform: uppercase;
-        letter-spacing: 1px;    
-        li:not(:first-child) {
-            padding-bottom: 0.8em;
-            font-weight: 700;
+        letter-spacing: 1px; 
+    } 
+    li:not(:first-child) {
+        padding-bottom: 0.8em;
+        font-weight: 700;
+        a {
+            padding: 1em 0;
+            position: relative;
+            transition: color 300ms linear;
+            &:hover::before,
+            &:focus::before {
+                font-family: "Font Awesome 5 Free";
+                font-size: 1.2em;
+                content: "\f0d7";           //fas fa-caret-down  
+                position: absolute;
+                display: inline-block;
+                top: -30%;
+                animation: hover-arrow 400ms 1 ease-in forwards;
+                color: $sunny-yellow;
+            }
+            &:hover,
+            &:focus {
+                color: $sunny-yellow;
+                transition-delay: 300ms;
+            }
         }
     }
-    a {
-        padding: 1em 0;
+    .current-page {
+        color: $sunny-yellow;
     }
     .burger-menu {
         display: none;

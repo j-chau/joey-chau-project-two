@@ -1,3 +1,27 @@
+@-webkit-keyframes hover-arrow {
+  0% {
+    left: 100%;
+  }
+  80% {
+    left: -15%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes hover-arrow {
+  0% {
+    left: 100%;
+  }
+  80% {
+    left: -15%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
   margin: 0;
   padding: 0;
@@ -311,6 +335,28 @@ main a {
   color: #074115;
   font-weight: 700;
   font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+aside a::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0%;
+  height: 40%;
+  left: 0;
+  bottom: 0%;
+  -webkit-transform: skewX(-35deg);
+          transform: skewX(-35deg);
+  background-color: #f8e71c;
+  z-index: -1;
+  -webkit-transition: width 200ms ease-in;
+  transition: width 200ms ease-in;
+}
+
+aside a:hover::before, aside a:focus::before {
+  width: 110%;
 }
 
 .logo {
@@ -348,6 +394,13 @@ address p:first-child {
   margin: 1.8em 0;
 }
 
+.read-more:focus,
+.find-more:focus,
+.post-btn:focus {
+  outline: 1px dotted white;
+  outline-offset: -7px;
+}
+
 .discover-content .read-more {
   display: inline-block;
   text-align: center;
@@ -364,6 +417,94 @@ address p:first-child {
   width: 100%;
   padding: 0.8em;
   margin: 0;
+}
+
+.read-more:hover, .read-more:focus,
+.find-more:hover,
+.find-more:focus {
+  position: relative;
+}
+
+.read-more::before, .read-more::after,
+.find-more::before,
+.find-more::after {
+  content: '';
+  position: absolute;
+  display: block;
+  background-color: #f8e71c;
+}
+
+.read-more::before,
+.find-more::before {
+  width: 0%;
+  height: 10px;
+  right: 0%;
+  bottom: -10px;
+}
+
+.read-more::after,
+.find-more::after {
+  width: 10px;
+  height: 0%;
+  right: -10px;
+  top: 10px;
+}
+
+.read-more:hover:before, .read-more:focus:before,
+.find-more:hover:before,
+.find-more:focus:before {
+  width: 90%;
+  -webkit-transition: 120ms width 200ms ease-in;
+  transition: 120ms width 200ms ease-in;
+}
+
+.read-more:hover::after, .read-more:focus::after,
+.find-more:hover::after,
+.find-more:focus::after {
+  height: 100%;
+  -webkit-transition: height 150ms linear;
+  transition: height 150ms linear;
+}
+
+.post-btn {
+  position: relative;
+}
+
+.post-btn::before, .post-btn::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0%;
+  height: 2px;
+  left: 3%;
+  bottom: 50%;
+  background-color: white;
+  -webkit-transition: width 200ms linear;
+  transition: width 200ms linear;
+}
+
+.post-btn::after {
+  left: 57%;
+}
+
+.post-btn:hover::before, .post-btn:focus::before {
+  width: 40%;
+}
+
+.post-btn:hover::after, .post-btn:focus::after {
+  -webkit-transition-delay: 400ms;
+          transition-delay: 400ms;
+  width: 40%;
+}
+
+.post-btn:not(:hover)::before, .post-btn:not(:focus)::before {
+  -webkit-transition-delay: 200ms;
+          transition-delay: 200ms;
+}
+
+.post-btn:active {
+  top: 2px;
+  left: 2px;
 }
 
 @media (max-width: 700px) {
@@ -542,6 +683,34 @@ button {
 
 .social-list ul a {
   color: #0e902d;
+  position: relative;
+  padding: 3px;
+  -webkit-transition: background-color 200ms ease-in 50ms, color 200ms ease-in;
+  transition: background-color 200ms ease-in 50ms, color 200ms ease-in;
+}
+
+.social-list ul a:hover, .social-list ul a:focus {
+  color: white;
+}
+
+.social-list ul a:focus {
+  outline: 1px dotted #0e902d;
+  outline-offset: 5px;
+}
+
+.social-list ul a:hover::before, .social-list ul a:focus::before {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 2em;
+  width: 2em;
+  left: 45%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #0e902d;
+  border-radius: 50%;
+  z-index: -1;
 }
 
 header {
@@ -581,6 +750,7 @@ header .top-nav {
 
 .top-nav {
   padding-top: 8px;
+  z-index: 2;
 }
 
 .top-nav ul {
@@ -598,13 +768,38 @@ header .top-nav {
   letter-spacing: 1px;
 }
 
-.top-nav ul li:not(:first-child) {
+.top-nav li:not(:first-child) {
   padding-bottom: 0.8em;
   font-weight: 700;
 }
 
-.top-nav a {
+.top-nav li:not(:first-child) a {
   padding: 1em 0;
+  position: relative;
+  -webkit-transition: color 300ms linear;
+  transition: color 300ms linear;
+}
+
+.top-nav li:not(:first-child) a:hover::before, .top-nav li:not(:first-child) a:focus::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 1.2em;
+  content: "\f0d7";
+  position: absolute;
+  display: inline-block;
+  top: -30%;
+  -webkit-animation: hover-arrow 400ms 1 ease-in forwards;
+          animation: hover-arrow 400ms 1 ease-in forwards;
+  color: #f8e71c;
+}
+
+.top-nav li:not(:first-child) a:hover, .top-nav li:not(:first-child) a:focus {
+  color: #f8e71c;
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
+}
+
+.top-nav .current-page {
+  color: #f8e71c;
 }
 
 .top-nav .burger-menu {
@@ -665,6 +860,12 @@ footer .wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #f8e71c;
+  text-decoration: underline;
 }
 
 .col-2-layout {

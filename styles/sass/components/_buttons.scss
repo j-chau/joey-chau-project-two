@@ -8,6 +8,10 @@
     width: 18ch;
     padding: 0.5em 0;
     margin: 1.8em 0;
+    &:focus {
+        outline: 1px dotted white;
+        outline-offset: -7px;
+    }
 }
 .discover-content .read-more {
     display: inline-block;
@@ -23,6 +27,74 @@
     width: 100%;
     padding: 0.8em;
     margin: 0;
+}
+.read-more,
+.find-more {
+    &:hover,
+    &:focus {
+        position: relative;
+    }
+    &::before,
+    &::after {
+        @include pseudo-els;
+        background-color: $sunny-yellow;
+    }
+    &::before {
+        width: 0%;
+        height: 10px;
+        right: 0%;
+        bottom: -10px;
+    }
+    &::after {
+        width: 10px;
+        height: 0%;
+        right: -10px;
+        top: 10px;
+    }
+    &:hover:before,
+    &:focus:before {
+        width: 90%;
+        transition: 120ms width 200ms ease-in;
+    }
+    &:hover::after,
+    &:focus::after {
+        height: 100%;
+        transition: height 150ms linear;
+    }
+}
+.post-btn {
+    position: relative;
+    &::before,
+    &::after {
+        @include pseudo-els;
+        width: 0%;
+        height: 2px;
+        left: 3%;
+        bottom: 50%;
+        background-color: white;
+        transition: width 200ms linear;
+    }
+    &::after {
+        left: 57%;
+    }
+    &:hover::before,
+    &:focus::before {
+        width: 40%;
+    }
+    &:hover::after,
+    &:focus::after {
+        transition-delay: 400ms;
+        width: 40%;
+    }
+    &:not(:hover)::before,
+    &:not(:focus)::before {
+        transition-delay: 200ms;
+    }
+    &:active {
+        top: 2px;
+        left: 2px;
+
+    }
 }
 @media (max-width: 700px) {
     .read-more,

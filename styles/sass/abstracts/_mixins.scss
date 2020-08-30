@@ -20,3 +20,9 @@
         font-weight: 700;
     }
 }
+
+@mixin pseudo-els {
+    content: '';
+    position: absolute;
+    display: block;
+}
