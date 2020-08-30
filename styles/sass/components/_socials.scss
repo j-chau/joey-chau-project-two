@@ -4,32 +4,33 @@
         display: flex;
         justify-content: space-between;
         width: 115px;
-        a {
-            color: $green;
-            position: relative;
-            padding: 3px;
-            transition:  background-color 200ms ease-in 50ms,
-                        color 200ms ease-in;
-            &:hover,
-            &:focus {
-                color: white;
-            }
-            &:focus {
-                outline: 1px dotted $green;
-                outline-offset: 5px;
-            }
-            &:hover::before,
-            &:focus::before {
-                @include pseudo-els;
-                height: 2em;
-                width: 2em;
-                left: 45%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                background-color: $green;
-                border-radius: 50%;
-                z-index: -1;
-            }
+    }
+    a {
+        color: $green;
+        position: relative;
+        padding: 3px;
+        &:hover,
+        &:focus {
+            color: white;
+        }
+        &:focus {
+            outline: 1px dotted $green;
+            outline-offset: 5px;
+        }
+        &::before {
+            @include pseudo-els;
+            height: 2em;
+            width: 2em;
+            left: 45%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: -1;
+            transition: background-color 200ms ease-in;
+        }
+        &:hover::before,
+        &:focus::before {
+            background-color: $green;
         }
     }
 }

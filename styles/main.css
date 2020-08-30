@@ -202,6 +202,10 @@ a {
   color: inherit;
 }
 
+body {
+  background-color: #f0efed;
+}
+
 .sr-only:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
@@ -419,6 +423,15 @@ address p:first-child {
   margin: 0;
 }
 
+@media (max-width: 700px) {
+  .read-more,
+  .find-more {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+}
+
 .read-more:hover, .read-more:focus,
 .find-more:hover,
 .find-more:focus {
@@ -505,15 +518,6 @@ address p:first-child {
 .post-btn:active {
   top: 2px;
   left: 2px;
-}
-
-@media (max-width: 700px) {
-  .read-more,
-  .find-more {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-  }
 }
 
 .burger-menu {
@@ -681,24 +685,22 @@ button {
   width: 115px;
 }
 
-.social-list ul a {
+.social-list a {
   color: #0e902d;
   position: relative;
   padding: 3px;
-  -webkit-transition: background-color 200ms ease-in 50ms, color 200ms ease-in;
-  transition: background-color 200ms ease-in 50ms, color 200ms ease-in;
 }
 
-.social-list ul a:hover, .social-list ul a:focus {
+.social-list a:hover, .social-list a:focus {
   color: white;
 }
 
-.social-list ul a:focus {
+.social-list a:focus {
   outline: 1px dotted #0e902d;
   outline-offset: 5px;
 }
 
-.social-list ul a:hover::before, .social-list ul a:focus::before {
+.social-list a::before {
   content: '';
   position: absolute;
   display: block;
@@ -708,9 +710,14 @@ button {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background-color: #0e902d;
   border-radius: 50%;
   z-index: -1;
+  -webkit-transition: background-color 200ms ease-in;
+  transition: background-color 200ms ease-in;
+}
+
+.social-list a:hover::before, .social-list a:focus::before {
+  background-color: #0e902d;
 }
 
 header {
@@ -921,6 +928,10 @@ footer a:focus {
   .w-30 {
     width: 100%;
   }
+}
+
+.home {
+  background-color: white;
 }
 
 .home header {
@@ -1309,10 +1320,6 @@ section {
     top: -130px;
     width: 95%;
   }
-}
-
-.contact {
-  background-color: #f0efed;
 }
 
 .contact header {

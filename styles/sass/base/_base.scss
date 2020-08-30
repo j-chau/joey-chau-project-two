@@ -1,3 +1,6 @@
+body {
+    background-color: $off-white;
+}
 .sr-only:not(:focus):not(:active) {
     position: absolute; width: 1px; height: 1px;
     margin: -1px; border: 0; padding: 0;
@@ -22,7 +25,7 @@
 }
 .wrapper {
     max-width: 1280px;
-    width: 81%;    //81% is important for blog!!
+    width: 81%;
     margin: 0 auto;
 }
 .wrapper-lg {

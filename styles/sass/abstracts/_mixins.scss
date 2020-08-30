@@ -21,6 +21,7 @@
     }
 }
 
+// standard declarations for &::before, &::after
 @mixin pseudo-els {
     content: '';
     position: absolute;
